@@ -1,0 +1,19 @@
+{
+  "name": "web-client-block-producer-repro",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Test PlainMicroBlock.producer field",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.1",
+  "dependencies": {
+    "@nimiq/core": "file:nimiq-core-patched.tgz"
+  },
+  "devDependencies": {
+    "vite": "^7.2.4",
+    "vite-plugin-wasm": "^3.5.0"
+  }
+}

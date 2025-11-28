@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimiq Web Client - Block Producer Test</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui; margin: 40px; max-width: 900px; }
+    pre { background: light-dark(#f5f5f5, #2a2a2a); padding: 15px; overflow-x: auto; font-size: 12px; border-radius: 4px; }
+    .status { padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+    .connecting { background: #fee; color: #c00; }
+    .syncing { background: #ffeeba; color: #856404; }
+    .established { background: #d4edda; color: #155724; }
+    h1 { margin-bottom: 5px; }
+    p.desc { color: light-dark(#666, #aaa); margin-top: 0; }
+  </style>
+</head>
+<body>
+  <h1>Block Producer Test</h1>
+  <p class="desc">Testing <code>PlainMicroBlock.producer</code> field | <a href="https://github.com/nimiq/core-rs-albatross/pull/3550">PR #3550</a> | <a href="https://github.com/onmax/web-client-block-producer-repro">Repo</a></p>
+
+  <div>Consensus: <span id="consensus" class="status connecting">connecting</span></div>
+  <div>Peers: <strong id="peers">0</strong></div>
+  <div>Block: <strong id="block">-</strong></div>
+
+  <h3>Producer (micro blocks only)</h3>
+  <pre id="producer-json">Waiting for micro block...</pre>
+
+  <h3>Full Block</h3>
+  <pre id="block-json">Waiting for blocks...</pre>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
